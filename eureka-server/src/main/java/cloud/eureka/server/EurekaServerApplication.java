@@ -1,6 +1,8 @@
 package cloud.eureka.server;
 
-import org.apache.commons.lang3.StringUtils;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author wei.liu
@@ -14,6 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 public class EurekaServerApplication {
 
     public static void main(String[] args) {
-        StringUtils.isNotBlank("");
+
+        SpringApplication.run(EurekaServerApplication.class, args);
     }
 }
