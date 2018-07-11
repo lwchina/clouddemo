@@ -7,5 +7,6 @@ package cloud.server.feign;
  * Date: 2018-07-09
  * Time: 17:23
  */
+
 public class ServerFeignApplication {
 }

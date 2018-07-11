@@ -1,4 +1,4 @@
-package cloud.server.ribbon.vo;
+package cloud.eureka.client.vo;
 
 /**
  * @author wei.liu
@@ -17,5 +17,12 @@ public class Params {
 
     public void setParam(String param) {
         this.param = param;
+    }
+
+    @Override
+    public String toString() {
+        return "Params{" +
+                "param='" + param + '\'' +
+                '}';
     }
 }

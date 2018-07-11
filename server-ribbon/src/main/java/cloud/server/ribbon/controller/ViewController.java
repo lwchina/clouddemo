@@ -1,5 +1,7 @@
-package cloud.eureka.client.controller;
+package cloud.server.ribbon.controller;
 
+import cloud.server.ribbon.service.RibbonService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,12 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ViewController {
 
-    @Value("${server.port}")
-    String port;
-
+    @Autowired
+    RibbonService ribbonService;
 
     @RequestMapping("/")
-    public String home() {
-        return "hello world from port " + port;
+    public String home(String param) {
+        return ribbonService.home(param);
     }
 }
